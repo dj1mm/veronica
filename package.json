@@ -1,0 +1,45 @@
+{
+    "name": "veronica",
+    "displayName": "Veronica",
+    "description": "Simple decimal to hex or binary converter",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.howMuchIsIt",
+        "onCommand:extension.changeInputRadix",
+        "onCommand:extension.changeOutputRadix"
+    ],
+    "main": "./build/main.js",
+    "contributes": {
+        "commands": [{
+            "command": "extension.howMuchIsIt",
+            "title": "How much is it?",
+            "category": "Veronica"
+        },{
+            "command": "extension.changeInputRadix",
+            "title": "Change input radix",
+            "category": "Veronica"
+        },{
+            "command": "extension.changeOutputRadix",
+            "title": "Change output radix",
+            "category": "Veronica"
+        }]
+    },
+    "scripts": {
+        "compile": "tsc -p .",
+        "watch": "tsc -watch -p ."
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.33.0",
+        "glob": "^7.1.5",
+        "typescript": "^3.6.4",
+        "tslint": "^5.0.0"
+    }
+}
